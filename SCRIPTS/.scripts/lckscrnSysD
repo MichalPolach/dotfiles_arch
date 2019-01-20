@@ -1,0 +1,8 @@
+#!/bin/bash
+
+rm -f /tmp/locked.png
+
+scrot -m -z /tmp/base.png
+convert /tmp/base.png -blur 0x8 /tmp/locked.png
+i3lock -e -f -i /tmp/locked.png
+pgrep -x i3lock && xset dpms force off

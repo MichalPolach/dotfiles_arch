@@ -1,0 +1,28 @@
+#!/bin/bash
+
+powerDraw="$(cat /sys/class/power_supply/BAT0/power_now)"
+state="$(acpi | awk '{print $3}')"
+percbat="$(acpi | awk '{print $4}' | cut --delimiter=% -f1)"
+
+if [ $state = "Charging," ]; then
+icon="🔌"
+elif [ $state = "Full," ]; then
+icon="⚡"
+elif [ $percbat -lt 20 ]; then
+icon="❗❗"
+else
+icon="🔋"
+fi
+
+case $BLOCK_BUTTON in
+        1) notify-send "<b>Power Draw and Battery capacity:</b>
+$(acpi -i | grep mAh | awk '/Battery 0/ {print $3, $4, $5, $6}')
+$(acpi -i | grep mAh | awk '/Battery 0/ {print $7, $8, $9, $10, $11}')
+$(acpi -i | grep mAh | awk '/Battery 0/ {print $9, $13}')
+Power Draw: $(( $powerDraw / 1000 )) mv" ;;
+        3) notify-send "<b>Battery Module:</b>
+- Left click to show Battery info
+- Right click to show this info" ;;
+esac
+
+echo "$icon $(acpi | awk '{print $4, $3, $5}')"

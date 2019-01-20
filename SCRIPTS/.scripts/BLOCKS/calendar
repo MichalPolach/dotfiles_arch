@@ -1,0 +1,11 @@
+#!/bin/sh
+
+case $BLOCK_BUTTON in
+        1) notify-send "<b>Calendar</b>:
+$(cal)" ;;
+        3) notify-send "<b>Calendar Module:</b>
+- Simple Calendar" ;;
+esac
+
+echo 📅 $(date '+%Y %b %d (%a) %I:%M%p') 🕓
+

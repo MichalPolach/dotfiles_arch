@@ -1,0 +1,10 @@
+#!/bin/bash
+
+rm -f /tmp/locked.png
+
+scrot -m -z /tmp/base.png
+notify-send -i ~/.scripts/lock.png "Locking computer..."
+convert /tmp/base.png -blur 0x8 /tmp/locked.png
+sleep 2
+i3lock -e -f -i /tmp/locked.png
+sleep 5 && [ 4000 -lt "$(xssstate -i)" ] && xset dpms force off

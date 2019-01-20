@@ -1,0 +1,67 @@
+# align
+# color
+# background
+# border
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
+
+command=~/.scripts/BLOCKS/$BLOCK_NAME
+separator_block_width=15
+markup=pango
+
+[brightness]
+interval=1
+label=💡
+
+[volume]
+#label=♪
+label=🔊
+instance=Master
+#instance=PCM
+interval=1
+signal=10
+command=~/.scripts/BLOCKS/volume 5 pulse
+
+[memory]
+interval=30
+label=🧠
+
+[cpu]
+interval=15
+label=💻
+
+[fan]
+interval=5
+label=🌀
+
+[diskLuke]
+interval=60
+command=~/.scripts/BLOCKS/diskLuke /
+
+[diskLuke2]
+interval=60
+command=~/.scripts/BLOCKS/diskLuke /home 🏠
+
+[batteryMP]
+interval=2
+
+[iface]
+label=🌐
+#instance=wlan0
+interval=10
+
+[calendar]
+interval=30
+
+[keyindicator]
+interval=1

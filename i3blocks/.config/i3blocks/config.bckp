@@ -1,0 +1,101 @@
+# align
+# color
+# background
+# border
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
+
+#command=/usr/lib/i3blocks/$BLOCK_NAME
+command=~/.scripts/BLOCKS/$BLOCK_NAME
+separator_block_width=15
+markup=pango
+
+[brightness]
+interval=1
+label=💡
+
+[volume]
+#label=♪
+label=🔊
+instance=Master
+#instance=PCM
+interval=1
+signal=10
+command=~/.scripts/BLOCKS/volume 5 pulse
+
+#[volume]
+#interval=once
+#command=i3volume
+#signal=10
+
+#[weather]
+#command=i3weather
+#interval=3600
+
+[memory]
+interval=30
+label=🧠
+
+[cpu]
+interval=15
+label=💻
+
+[fan]
+interval=15
+label=🌀
+
+#[disk]
+#label=💽
+#instance=/mnt/data
+#interval=30
+
+[diskLuke]
+interval=60
+command=diskLuke /
+
+[disk]
+interval=60
+command=diskLuke /home 🏠
+
+#[battery]
+#command=battery2 BAT0
+#interval=5
+
+#[battery]
+#command=acpi | sed s/"Battery 0:"/🔋/g
+#interval=5
+
+[batteryMP]
+interval=2
+
+#[battery]
+#command=i3battery
+#interval=5
+
+[iface]
+label=🌐
+#instance=wlan0
+interval=10
+
+[wifi]
+command=i3wifi
+instance=wlp2s0
+interval=10
+
+#[time]
+#label=📅
+#command=echo $(date '+%Y %b %d (%a)  %I:%M%p') 🕓
+#interval=30
+
+[calendar]
+interval=30

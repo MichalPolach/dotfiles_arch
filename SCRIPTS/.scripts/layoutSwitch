@@ -1,0 +1,14 @@
+#!/bin/bash
+
+layout=$(setxkbmap -query | awk '/layout:/ {print $2}')
+
+if [ $layout = "us" ]
+then
+	setxkbmap cz
+	notify-send "CZ"
+
+elif [ $layout = "cz" ]
+then
+	setxkbmap us
+	notify-send "US"
+fi

@@ -1,0 +1,19 @@
+#!/bin/bash
+
+current="$(cat /sys/class/backlight/intel_backlight/actual_brightness)"
+max="$(cat /sys/class/backlight/intel_backlight/max_brightness)"
+percent="$(( $current *100 / $max ))"
+
+case $BLOCK_BUTTON in
+        1) notify-send "<b>Dimming Brightness</b>"
+xbacklight -dec 1000 ;;
+	2) notify-send "<b>Brightness Module:
+- Left click to dimm screen.
+- Right click to max brightness
+- Middle to show this info.
+- indicating % of brightness" ;;
+        3) notify-send "<b>Max Brightness</b>"
+xbacklight -inc 1000;;
+esac
+
+echo "$percent %"
