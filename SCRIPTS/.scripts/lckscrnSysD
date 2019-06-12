@@ -1,5 +1,11 @@
 #!/bin/bash
 
+layout=$(setxkbmap -query | awk '/layout:/ {print $2}')
+
+if [ $layout = "cz" ]; then
+	setxkbmap us
+fi
+
 rm -f /tmp/locked.png
 
 scrot -m -z /tmp/base.png

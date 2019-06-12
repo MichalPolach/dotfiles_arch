@@ -1,28 +1,59 @@
 #!/bin/bash
 
 powerDraw="$(cat /sys/class/power_supply/BAT0/power_now)"
-state="$(acpi | awk '{print $3}')"
-percbat="$(acpi | awk '{print $4}' | cut --delimiter=% -f1)"
 
-if [ $state = "Charging," ]; then
-icon="🔌"
-elif [ $state = "Full," ]; then
-icon="⚡"
-elif [ $percbat -lt 20 ]; then
-icon="❗❗"
+
+if [[ $( acpi | awk 'FNR == 2 {print $1 $2}') = "Battery1:" ]]; then
+	state="$(acpi | awk 'FNR == 2 {print $3')"
+	percbat="$(acpi | awk 'FNR == 2 {print $4}' ) | cut --delimiter=% -f1)"
+	showBar=$(acpi | awk 'FNR == 2 {print $4 $3 $5}' )
 else
-icon="🔋"
+	state="$(acpi | awk '{print $3}')"
+	percbat="$(acpi | awk '{print $4}' | cut --delimiter=% -f1)"
+	showBar=$(acpi | awk '{print $4 $3 $5}')
 fi
 
+
+function warning {
+if [ ! -f ~/.scripts/batteryLow ] ; then
+	zenity --warning --text="LOW BATTERY" --width="150"
+	touch ~/.scripts/batteryLow
+elif [ -f ~/.scripts/batteryLow ] ; then
+	continue
+fi
+}
+
+
+if [ $state = "Charging," ]; then
+	icon="🔌"
+elif [ $state = "Full," ]; then
+	icon="⚡"
+elif [ $percbat -lt 20 ]; then
+	icon="❗❗"
+	warning
+elif [ $percbat -gt 20 ]; then
+	icon="🔋"
+	rm ~/.scripts/batteryLow
+else
+	icon="🔋"
+fi
+
+#if [ $percbat -lt 8 ] ; then
+#	zenity --warning --text="Battery Critital - Hibernating" --width="170"
+#	sleep 30s
+#	systemctl hibernate
+#	continue
+#fi
+
 case $BLOCK_BUTTON in
-        1) notify-send "<b>Power Draw and Battery capacity:</b>
-$(acpi -i | grep mAh | awk '/Battery 0/ {print $3, $4, $5, $6}')
-$(acpi -i | grep mAh | awk '/Battery 0/ {print $7, $8, $9, $10, $11}')
-$(acpi -i | grep mAh | awk '/Battery 0/ {print $9, $13}')
+        1) notify-send "Power Draw and Battery capacity:
+$(acpi -i | grep mAh | awk '{print $3, $4, $5, $6}')
+$(acpi -i | grep mAh | awk '{print $7, $8, $9, $10, $11}')
+$(acpi -i | grep mAh | awk '{print $9, $13}')
 Power Draw: $(( $powerDraw / 1000 )) mv" ;;
-        3) notify-send "<b>Battery Module:</b>
+        3) notify-send "Battery Module:
 - Left click to show Battery info
 - Right click to show this info" ;;
 esac
 
-echo "$icon $(acpi | awk '{print $4, $3, $5}')"
+echo "$icon $showBar"

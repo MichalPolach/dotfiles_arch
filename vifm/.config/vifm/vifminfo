@@ -1,0 +1,348 @@
+# You can edit this file by hand, but it's recommended not to do that.
+
+# Marks:
+'b
+	/home/michal/bin/
+	..
+1558364549
+'h
+	/home/michal/
+	..
+1558364549
+
+# Bookmarks:
+
+# TUI:
+al
+q1
+v2
+ov
+m-1
+l2
+r2
+
+# Left window history (oldest to newest):
+d/home/michal/Pictures/wallpapers/Vibrant
+	1432908749300.jpg
+6
+d/home/michal/Pictures/wallpapers/Future
+	deus_ex.png
+4
+d/home/michal
+	batterySell
+9
+d/home
+	michal
+2
+d/home/michal
+	Pictures
+7
+d/home/michal/Pictures
+	wallpapers
+1
+d/home/michal/Pictures/wallpapers
+	Art
+1
+d/home/michal/Pictures/wallpapers/Art
+	art_12.png
+16
+d/home/michal/Pictures/wallpapers
+	Landscapes
+5
+d/home/michal/Pictures/wallpapers/Landscapes
+	1472670404824.jpg
+26
+d/home/michal/Pictures/wallpapers
+	Titans
+8
+d/home/michal/Pictures/wallpapers/Titans
+	crag_dragon.png
+6
+d/home/michal
+	Pictures
+7
+d/home/michal/Pictures
+	wallpapers
+1
+d/home/michal/Pictures/wallpapers
+	Unsorted
+9
+d/home/michal/Pictures/wallpapers/Unsorted
+	1480798791438.jpg
+6
+d/home/michal/Pictures/wallpapers
+	Landscapes
+5
+d/home/michal/Pictures/wallpapers/Landscapes
+	20170718_134348.jpg
+7
+d/home/michal/Pictures/wallpapers
+	Spacescapes
+6
+d/home/michal/Pictures
+	wallpapers
+1
+d/home/michal
+	.config
+3
+d/home/michal/.config
+	dunst
+6
+d/home/michal/.config/dunst
+	dunstrc
+1
+d/home/michal/.config
+	dunst
+6
+d/home/michal/.config/dunst
+	dunstrc
+1
+d/home/michal/.config
+	wall.png
+30
+d/home/michal
+	.config
+3
+d/home/michal/.config
+	gtk-3.0
+10
+d/home/michal
+	.config
+3
+d/home/michal/.config
+	vlc
+26
+d/home/michal
+	.config
+3
+d/home
+	michal
+2
+d/home/michal
+	Dropbox
+11
+d/home/michal/Dropbox
+	Documentation
+3
+d/home/michal/Dropbox/Documentation
+	..
+0
+d/home/michal/Dropbox
+	work
+9
+d/home/michal/Dropbox/work
+	..
+0
+d/home/michal/Dropbox
+	20180917_001_pocitarna.m4a
+12
+d/home/michal
+	Pictures
+11
+d/home/michal/Pictures
+	foto_polachj.jpg
+2
+d/home/michal
+	Pictures
+11
+d/home/michal/Pictures
+	wallpapers
+1
+d/home/michal/Pictures/wallpapers
+	Landscapes
+6
+d/home/michal/Pictures/wallpapers/Landscapes
+	1490215890981.jpg
+28
+d/home/michal/Pictures/wallpapers
+	Landscapes
+6
+d/home/michal/Pictures
+	wallpapers
+1
+d/home/michal
+	Pictures
+12
+d/home/michal/Pictures
+	wallpapers
+1
+d/home/michal/Pictures/wallpapers
+	Landscapes
+6
+d/home/michal/Pictures/wallpapers/Landscapes
+	1490215890981.jpg
+28
+d/home/michal/Pictures/wallpapers
+	Landscapes
+6
+d/home/michal/Pictures
+	wallpapers
+1
+d/home/michal
+	2019-06-01-110132_1366x768_scrot.png
+28
+d
+
+# Right window history (oldest to newest):
+D/home/michal
+	DOTFILES_BACKUP
+1
+D/home
+	michal
+2
+D/
+	run
+12
+D/run
+	..
+0
+D/
+	mnt
+8
+D/mnt
+	..
+0
+D/
+	run
+12
+D/run
+	mount
+13
+D/run/mount
+	..
+0
+D/run
+	nscd
+14
+D/
+	opt
+9
+D/opt
+	..
+0
+D/
+	opt
+9
+D/opt
+	..
+0
+D/
+	run
+12
+D/run
+	media
+12
+D/run/media
+	michal
+1
+D/run/media/michal
+	Debian testing amd64 n
+1
+D/run/media/michal/Debian testing amd64 n
+	win32-loader.ini
+24
+D/run/media/michal
+	Debian testing amd64 n
+1
+D/run/media/michal/Debian testing amd64 n
+	win32-loader.ini
+24
+D/run/media/michal
+	..
+0
+D/run/media
+	michal
+1
+D/run/media/michal
+	Debian testing amd64 n
+1
+D/run/media/michal/Debian testing amd64 n
+	debian
+4
+D/run/media/michal/Debian testing amd64 n/debian
+	debian
+4
+D/run/media/michal/Debian testing amd64 n/debian/debian
+	debian
+4
+D/run/media/michal/Debian testing amd64 n/debian/debian/debian
+	EFI
+1
+D/run/media/michal/Debian testing amd64 n/debian/debian/debian/EFI
+	..
+0
+D/run/media/michal/Debian testing amd64 n/debian/debian/debian
+	win32-loader.ini
+24
+D/run/media/michal
+	..
+0
+D/run/media
+	..
+0
+D/run
+	media
+12
+D/run/media/michal
+	..
+0
+D/run/media
+	michal
+1
+D/run
+	media
+12
+D/run/media
+	michal
+1
+D/run/media/michal
+	flashride32
+1
+D/run/media/michal/flashride32
+	vifm
+4
+D/run
+	lock
+9
+D
+
+# Command line history (oldest to newest):
+:vim ~/.config/vifm/scripts/imgt
+:mkdir dotfiles
+:sudo mkdir dotfiles
+:cd media/michal/
+:scrot
+:q
+
+# Search history (oldest to newest):
+
+# Prompt history (oldest to newest):
+pattributes.png
+p.png
+pselftest.png
+perrorlog.png
+pdesktop.png
+
+# Local filter history (oldest to newest):
+
+# Registers:
+""/home/michal/.local/share/vifm/Trash/000_2019-06-01-104756_1366x768_scrot.png
+
+# Directory stack (oldest to newest):
+
+# Trash content:
+t/home/michal/.local/share/vifm/Trash/000_2019-06-01-104756_1366x768_scrot.png
+	/home/michal/2019-06-01-104756_1366x768_scrot.png
+t/home/michal/.local/share/vifm/Trash/000_2019-06-01-103951_1366x768_scrot.png
+	/home/michal/2019-06-01-103951_1366x768_scrot.png
+
+# State:
+f
+i1
+[.0
+[F
+F
+I1
+].1
+]F
+s0

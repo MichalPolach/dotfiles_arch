@@ -1,0 +1,28 @@
+#!/bin/sh
+
+layout=$(setxkbmap -query | awk '/layout:/ {print $2}')
+
+if [ $layout = "us" ]
+then
+        setxkbmap cz
+        notify-send "CZ"
+	displayLayout="CZ"
+
+elif [ $layout = "cz" ]
+then
+        setxkbmap us
+        notify-send "US"
+	displayLayout="US"
+fi
+
+case $BLOCK_BUTTON in
+        1) notify-send "<b>Layout Indicator</b>:
+Module for displaying current keyboard layout
+- press 'mod + space' to switch layout ";;
+#        3) notify-send "<b>bold text</b>
+#- item1
+#- item2
+#- item3" ;;
+esac
+
+echo $displayLayout

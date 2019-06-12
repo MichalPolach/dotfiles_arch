@@ -7,7 +7,7 @@ percent="$(( $current *100 / $max ))"
 case $BLOCK_BUTTON in
         1) notify-send "<b>Dimming Brightness</b>"
 xbacklight -dec 1000 ;;
-	2) notify-send "<b>Brightness Module:
+	2) notify-send "<b>Brightness Module:</b>
 - Left click to dimm screen.
 - Right click to max brightness
 - Middle to show this info.

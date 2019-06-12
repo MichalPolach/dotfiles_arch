@@ -11,3 +11,4 @@ alias grep="grep --color=auto" # Color grep - highlight desired sequence.
 alias cfi='vim ~/.config/i3/config'
 alias cfib='vim ~/.config/i3blocks/config'
 alias ll='ls -la'
+alias gsc='sudo gsmartcontrol'

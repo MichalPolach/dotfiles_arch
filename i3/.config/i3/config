@@ -17,8 +17,8 @@ font pango:inconsolata 10
 
 # GAPS
 for_window [class="^.*"] border pixel 3
-gaps inner 6
-gaps outer 4
+gaps inner 4
+gaps outer 2
 bindsym $mod+s			gaps inner current plus 5
 bindsym $mod+Shift+s		gaps inner current minus 5
 bindsym $mod+z			gaps outer current plus 5
@@ -95,7 +95,7 @@ bindsym $mod+f fullscreen toggle
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-#bindsym $mod+space focus mode_toggle
+bindsym $mod+Shift+Return focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -216,6 +216,10 @@ exec --no-startup-id dropbox
 
 # Bluetooth
 exec --no-startup-id blueman-applet
+
+# Authentication elevation (password prompt)
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
 
 # Keyboard Layout Switching
 bindsym $mod+space exec layoutSwitch

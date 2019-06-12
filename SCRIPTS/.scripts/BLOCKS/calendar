@@ -1,9 +1,9 @@
 #!/bin/sh
 
 case $BLOCK_BUTTON in
-        1) notify-send "<b>Calendar</b>:
+        1) notify-send "Calendar:
 $(cal)" ;;
-        3) notify-send "<b>Calendar Module:</b>
+        3) notify-send "Calendar Module:
 - Simple Calendar" ;;
 esac
 
